@@ -45,66 +45,72 @@
 .search-btn{
   color:#EAB2FF;
 }
-.hero-right{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 
-.img-background{
-  width: 400px;
-  height: 400px;
-  background-color: #5F3EF5;
-  border-radius: 100%;
-  position: relative;
-}
-
-.banner-image{
-  width: 75%;
-  height: 80%;
-  position: absolute;
-}
-/* .option{
-  border: none;
-}
-.option:focus{
-  border: none;
-} */
-  .all-buttons-container{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    border-radius:5px;
-    margin-right: 40px;
+/* respnosive */
+/* @media (min-width: 200.98px) {
+  .title{
+    font-size: 40px;
+    background-color: blue;
   }
-  .small-box{
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    width:80%;
-    background: #EAB2FF;
-    margin: auto;
-    border-right: 2px solid rgb(107, 107, 107);
-    
+ }
+
+ @media (min-width: 767.98px) {
+  .title{
+    background-color:aqua ;
   }
-  .search-button-4  {
-    /* width: 50px; */
-   
+ }
+
+@media (min-width: 991.98px) { 
+  .form-design{
+    flex-direction: column;
+  }
+  .title{
+    font-size: 60px;
+    background-color: salmon;
+  }
+ }
+ @media (min-width: 1199.98px) {
+  .title{
+    background-color: yellow;
+  }
+  }
+ @media (min-width: 1399.98px) {
+  .title{
     background-color: red;
-    border-radius: 5px;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    /* margin: 13px; */
-    padding:8px;
-    width:100%;
-    /* margin-right: 10px; */
   }
-  
-  .banner-second-container{
-    width: 90%;
-    margin: auto;
-    height: 71vh;
+  } */
+
+  /* pipilika */
+@media (max-width: 1600.98px) {
+  .title{
+    font-size: 40px;
+    background-color: blue;
+  }
+ }
+
+ @media (max-width: 1200.98px) {
+  .title{
+    background-color:aqua ;
+  }
+ }
+
+@media (max-width: 991.98px) { 
+  .form-design{
+    flex-direction: column;
+  }
+  .title{
+    font-size: 60px;
+    background-color: salmon;
+  }
+ }
+ @media (max-width: 800.98px) {
+  .title{
+    background-color: yellow;
+  }
+  }
+ @media (max-width: 300.98px) {
+  .title{
+    background-color: red;
+  }
   }

@@ -12,6 +12,7 @@
 
 .form-design{
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -21,8 +22,8 @@
   justify-content: space-around;
   background: #EAB2FF;
   color: black;
-  width: 30%;
-  height: 60px;
+  width: 80%;
+  height: 40px;
   border-radius: 20px;
 }
 .select-field{
@@ -30,8 +31,13 @@
   background: #EAB2FF;
   width: 80%;
   height: 100%;
-  padding: 10px 10px;
-  font-size: 25px;
+  padding: 5px 3px;
+  font-size: 16px;
+  border-radius: 20px;
+}
+.location-field{
+  margin: 10px 0;
+  margin-right: 15px;
 }
 .select-field:focus{
   border: none;
@@ -45,66 +51,60 @@
 .search-btn{
   color:#EAB2FF;
 }
-.hero-right{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 
-.img-background{
-  width: 400px;
-  height: 400px;
-  background-color: #5F3EF5;
-  border-radius: 100%;
-  position: relative;
-}
-
-.banner-image{
-  width: 75%;
-  height: 80%;
-  position: absolute;
-}
-/* .option{
-  border: none;
-}
-.option:focus{
-  border: none;
-} */
-  .all-buttons-container{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    border-radius:5px;
-    margin-right: 40px;
-  }
-  .small-box{
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    width:80%;
-    background: #EAB2FF;
-    margin: auto;
-    border-right: 2px solid rgb(107, 107, 107);
-    
-  }
-  .search-button-4  {
-    /* width: 50px; */
+/* respnosive */
+@media (min-width: 200.98px) {
+  .title{
+    font-size: 40px;
    
-    background-color: red;
-    border-radius: 5px;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    /* margin: 13px; */
-    padding:8px;
-    width:100%;
-    /* margin-right: 10px; */
+  }
+ }
+
+ @media (min-width: 767.98px) {
+  .title{
+   font-size: 60px;
+  }
+  .form-design{
+    flex-direction: row;
+  }
+  .input-field{
+    width: 40%;
+    height: 60px;
+  }
+
+  .select-field{
+    padding: 5px 10px;
+    font-size: 20px;
+  }
+  .location-field{
+    margin: 0 0;
+    margin-right: 15px;
   }
   
-  .banner-second-container{
-    width: 90%;
-    margin: auto;
-    height: 71vh;
+ }
+
+@media (min-width: 991.98px) { 
+ 
+  .title{
+    font-size: 80px;
+    /* background-color: salmon; */
+  }
+  .input-field{
+    width: 30%;
+  }
+  .select-field{
+    padding: 10px 15px;
+    font-size: 25px;
+  }
+ }
+ @media (min-width: 1199.98px) {
+  .title{
+    /* background-color: yellow; */
+  }
+  }
+ @media (min-width: 1399.98px) {
+  .title{
+    /* background-color: red; */
+  }
   }

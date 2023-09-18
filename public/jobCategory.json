@@ -1,0 +1,23 @@
+  [
+   { "id": 0, "name": "Your Job Type" },
+   { "id": 1, "name": "Software Developer" },
+   { "id": 2, "name": "Data Analyst" },
+   { "id": 3, "name": "Registered Nurse" },
+   { "id": 4, "name": "Civil Engineer" },
+   { "id": 5, "name": "Teacher" },
+   { "id": 6, "name": "Marketing Manager" },
+   { "id": 7, "name": "Sales Representative" },
+   { "id": 8, "name": "Chef" },
+   { "id": 9, "name": "Human Resources Specialist" },
+   { "id": 10, "name": "Construction Worker" },
+   { "id": 11, "name": "Financial Analyst" },
+   { "id": 12, "name": "Doctor" },
+   { "id": 13, "name": "Electrician" },
+   { "id": 14, "name": "Librarian" },
+   { "id": 15, "name": "Graphic Designer" },
+   { "id": 16, "name": "Dental Hygienist" },
+   { "id": 17, "name": "Mechanical Engineer" },
+   { "id": 18, "name": "Accountant" },
+   { "id": 19, "name": "Police Officer" },
+   { "id": 20, "name": "Plumber" }
+ ]

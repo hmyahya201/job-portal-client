@@ -1,0 +1,35 @@
+const data = [
+   {
+     title: "junior front-end dev",
+     salary: "30k",
+     deadline: "20/01/2023",
+     description: "fbauifbu sdifbudsdsv sn sdvidspvludsbvdsi n sivbdsivubs",
+     category: "engineering",
+     status: "offline",
+     image:
+       "https://images.pexels.com/photos/2528118/pexels-photo-2528118.jpeg?auto=compress&cs=tinysrgb&w=600",
+     skills: ["c++", "HMTL", "CSS", "javascript", "Node js", "React"],
+   },
+   {
+     title: "junior Video editor",
+     salary: "30k",
+     deadline: "20/01/2023",
+     description: "fbauifbu sdifbudsdsv sn sdvidspvludsbvdsi n sivbdsivubs",
+     category: "engineering",
+     status: "offline",
+     image:
+       "https://images.pexels.com/photos/2773498/pexels-photo-2773498.jpeg?auto=compress&cs=tinysrgb&w=600",
+     skills: ["c++", "HMTL", "CSS", "javascript", "Node js", "React"],
+   },
+   {
+     title: "junior Video editor",
+     salary: "30k",
+     deadline: "20/01/2023",
+     description: "fbauifbu sdifbudsdsv sn sdvidspvludsbvdsi n sivbdsivubs",
+     category: "engineering",
+     status: "offline",
+     image:
+       "https://images.pexels.com/photos/3861959/pexels-photo-3861959.jpeg?auto=compress&cs=tinysrgb&w=600",
+     skills: ["c++", "HMTL", "CSS", "javascript", "Node js", "React"],
+   },
+ ];

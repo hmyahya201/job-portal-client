@@ -14,6 +14,7 @@ const AddJob = () => {
     watch,
     formState: { errors },
   } = useForm();
+
   const onSubmit = (data) => {
     data.skills = selectedOption;
 
@@ -43,6 +44,8 @@ const AddJob = () => {
     <div className="add-job-container">
       <div className="add-job row">
         <div className="col-md-8">
+
+          
           <form onSubmit={handleSubmit(onSubmit)}>
             {errors.exampleRequired && <span>This field is required</span>}
             <input
@@ -108,6 +111,9 @@ const AddJob = () => {
             />
             <input className="submit-btn" value="Post Job" type="submit" />
           </form>
+
+
+
         </div>
         <div className="col-md-4">
           <img

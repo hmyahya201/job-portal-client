@@ -19,7 +19,19 @@
     padding: 13px 40px;
     background-color: #fff;
     cursor: pointer;
+    color: chartreuse;
 }
 .tab1{
     border-right: 2px solid gray;
+}
+
+
+.active{
+    background: red !important;
+    color: white !important;
+}
+.mtab{
+    padding: 10px 40px;
+    color: black;
+    background-color: white;
 }

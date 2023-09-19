@@ -22,11 +22,11 @@ const Jobs = () => {
     setActiveTab(tabStatus);
   };
   return (
-    <div>
-      <h1 className="title text-center mt-5 p-5">Available Job's</h1>
+    <div className="job-container p-5">
+      <h1 className="job_title text-center">Available Job's</h1>
       <div className="tab-container text-center">
         <div className="text-center w-100 m-auto">
-          <div className="tabs d-flex justify-content-center align-items-center">
+          <div className="job_tab pt-3 d-flex justify-content-center align-items-center">
 
 
           <div 

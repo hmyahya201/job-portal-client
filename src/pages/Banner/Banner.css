@@ -88,7 +88,6 @@
  
   .title{
     font-size: 80px;
-    /* background-color: salmon; */
   }
   .input-field{
     width: 30%;
@@ -98,13 +97,3 @@
     font-size: 25px;
   }
  }
- @media (min-width: 1199.98px) {
-  .title{
-    /* background-color: yellow; */
-  }
-  }
- @media (min-width: 1399.98px) {
-  .title{
-    /* background-color: red; */
-  }
-  }

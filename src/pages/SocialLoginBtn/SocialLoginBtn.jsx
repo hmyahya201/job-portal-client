@@ -1,12 +1,6 @@
-import React from "react";
-import { useState } from "react";
+
 import "./SocialLoginBtn.css";
-import {
-  GoogleAuthProvider,
-  getAuth,
-  signInWithPopup,
-  GithubAuthProvider,
-} from "firebase/auth";
+
 
 
 const SocialLoginBtn = () => {

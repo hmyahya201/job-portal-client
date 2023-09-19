@@ -1,0 +1,22 @@
+.form-register{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+}
+.form_card{
+   background: #EAB2FF;
+}
+.r_input-field{
+   border: 0;
+   width: 90%;
+   border-radius: 10px;
+}
+.register_btn{
+   width: 95%;
+}
+
+/* //responsive */
+@media (max-width: 767.98px) { 
+   .form-register{
+      grid-template-columns: repeat(1, 1fr);
+   }
+ }

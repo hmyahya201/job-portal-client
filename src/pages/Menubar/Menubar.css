@@ -1,27 +1,23 @@
-.Menubar-container{
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
-    background-color: #212529;
-    color:white !important;
-}
-.menu-container{
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    
-}
-.menu-container li{
-    margin-right: 10px;
-    font-size:18px;
-    color: white;
-    list-style: none;
-    
+.job_nav{
+    background: #5f3ef5;
+    padding: 20px 0;
 }
 .logo{
-    width: 60px;
+    color:#EAB2FF;
+    font-size: 40px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: -22px;
+}
+.menu-bar{
+    margin-left: 20%;
 }
 .menu-item{
-    text-decoration: none !important;
-    padding-top: 10px;
+    color:#EAB2FF;
+    font-size: 25px;
+   margin: 0 7px;
+   font-weight: 500;
+}
+.menu-item:hover{
+    color: #fff;
 }

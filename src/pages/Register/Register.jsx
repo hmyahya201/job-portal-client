@@ -2,6 +2,8 @@
 import SocialLoginBtn from "./../SocialLoginBtn/SocialLoginBtn";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
+import './register.css'
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const { registerUser } = useContext(AuthContext);
@@ -13,14 +15,12 @@ const Register = () => {
 
   const handleRegistration = (event) => {
     event.preventDefault();
-    if (!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password)) {
-      setError("password not valid need 8 char ");
-      return;
-    }
+    const form = event.target
     if ((name, email, password)) {
       registerUser(email, password)
         .then((result) => {
           console.log(result.user);
+          form.reset()
         })
         .catch((err) => {
           console.log(err.message);
@@ -29,62 +29,80 @@ const Register = () => {
   };
   return (
     <div>
-      <div className="container">
+      <div className="container mt-5">
         <div className="row d-flex justify-content-center align-items-center">
           <div className="col-md-6 ">
-            <div className="border w-100 m-auto text-center p-5">
-              <p className="text-danger">{error}</p>
+            <div className="border border-1  rounded w-100 m-auto p-5 form_card">
+              <h2 className="text-center mb-4">Register</h2>
               <form action="">
-                <input
-                  onChange={(e) => setName(e.target.value)}
-                  className="email p-3 m-2"
-                  type="text"
-                  placeholder="enter your Name"
-                  required
-                />
-                <input
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="email p-3 m-2"
-                  type="email"
-                  placeholder="enter your email"
-                />
-                <div className="pass-container">
-                  <input
-                    onChange={(e) => setPassword(e.target.value)}
-                    className="password p-3 m-2"
-                    type="text"
-                    placeholder="type your password"
-                  />
-                  {/* <input
-                    className="password p-3 m-2"
-                    type="password"
-                    placeholder="enter your password"
-                  /> */}
-                  {/* <button>toggle</button> */}
+                <div className="form-register">
+                  <div className="name-field">
+                    <label htmlFor="name">Name</label>
+                    <br/>
+                    <input
+                      onChange={(e) => setName(e.target.value)}
+                      className="email r_input-field p-3 mt-1 mb-1"
+                      type="text"
+                      placeholder="enter your Name"
+                      required
+                    />
+                  </div>
+
+                  <div className="email-field">
+                    <label htmlFor="email">Email</label>
+                    <br/>
+                    <input
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="email p-3 mt-1 mb-1 r_input-field"
+                      type="email"
+                      placeholder="enter your email"
+                    />
+                  </div>
+                  <div className="phone-field">
+                    <label htmlFor="phone">Phone</label>
+                    <br/>
+                    <input
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="email p-3 mt-1 mb-1 r_input-field"
+                      type="number"
+                      placeholder="enter your phone number"
+                    />
+                  </div>
+                  <div className="pass-field">
+                    <label htmlFor="password">Password</label>
+                    <input
+                      onChange={(e) => setPassword(e.target.value)}
+                      className="password p-3 mt-1 mb-1 r_input-field "
+                      type="text"
+                      placeholder="type your password"
+                    />
+                  </div>
                 </div>
                 <button
                   onClick={handleRegistration}
-                  className="btn btn-info w-75 p-2 mt-3"
+                  className="btn btn-info me-5 register_btn p-2 mt-3"
                 >
                   Register
                 </button>
                 <p className="p-2">
-                  <small className="text-info">
-                    already have account? login here..
+                  <small className="text-black fs-5">
+                    already have account? <Link to = "/login" className="fw-bold fs-3 text-decoration-none">Login</Link>
                   </small>
                 </p>
+                <SocialLoginBtn className="gogle-login_btn"></SocialLoginBtn>
               </form>
             </div>
+            <p className="text-danger">{error}</p>
           </div>
-          <div className="col-md-6">
+
+          <div className="col-md-6 ml-5">
             <img
-              className="w-100"
+              className="img-fluid rounded"
               src="https://i.ibb.co/Vmyggr3/undraw-Login-re-4vu2.png"
               alt=""
             />
           </div>
         </div>
-        <SocialLoginBtn></SocialLoginBtn>
       </div>
     </div>
   );

@@ -8,14 +8,19 @@ import { AuthContext } from "../../provider/AuthProvider";
 // import { useLocation, useHistory, useNavigate } from "react-router";
 
 const Login = () => {
-  const { loginUser } = useContext(AuthContext);
+  const { loginUser, gooleLogin } = useContext(AuthContext);
   // const location = useLocation();
   // const history = useHistory();
   // let navigate = useNavigate();
+
+  const handleGoogleLogin = ()=>{
+    gooleLogin()
+  }
   
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  console.log(email, password)
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -63,8 +68,9 @@ const Login = () => {
               </form>
             </div>
           </div>
-          <div className="col-md-6">
+          <div  className="col-md-6">
             <img
+              onClick={handleGoogleLogin}
               className="w-100"
               src="https://i.ibb.co/hYJTmVX/undraw-Mobile-login-re-9ntv-1.png"
               alt=""

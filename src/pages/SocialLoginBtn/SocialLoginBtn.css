@@ -5,5 +5,7 @@
     
 }
 .social-button-container{
-    text-align: center
+    text-align: center;
+    margin: 10px;
+    display: flex;
 }

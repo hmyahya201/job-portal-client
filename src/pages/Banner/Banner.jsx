@@ -1,7 +1,6 @@
 
-import { FaSearch, FaArrowAltCircleDown, FaMapMarkerAlt } from "react-icons/fa";
+import { FaSearch, FaMapMarkerAlt } from "react-icons/fa";
 import { useForm } from "react-hook-form"
-import { AiFillCaretDown } from "react-icons/ai";
 import "./Banner.css";
 import { useEffect, useState} from "react";
 
@@ -31,9 +30,6 @@ useEffect(()=>{
     handleSubmit,
   } = useForm()
   const onSubmit = (data) => console.log("submit data", data)
-
-
-
 
   return (
 

@@ -42,10 +42,9 @@ const Menubar = () => {
            All Jobs
          </Nav.Link>
           <Nav.Link className='menu-item' href="/addJob">Post Job</Nav.Link>
-          <Nav.Link className='menu-item' href="/register">Register</Nav.Link>
           {user?.email ? (
             <li className="p-2">
-              <button className='menu-item' onClick={handleLogout}>Logout</button>
+              <button className='menu-item logOut_btn' onClick={handleLogout}>Logout</button>
             </li>
           ) : (
             <Nav.Link className='menu-item'  href="/login">
@@ -54,7 +53,9 @@ const Menubar = () => {
           )}
         </Nav>
         <Nav>
-          <p>g-mail pik</p>
+          <div>
+            {user? <img className='phot-url' src={user.photoURL} alt="" />:""}
+          </div>
         </Nav>
       </Navbar.Collapse>
     </Container>

@@ -6,60 +6,80 @@ import {
   FaTwitterSquare,
   FaLinkedin,
 } from "react-icons/fa";
+import './footer.css'
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <footer className="bg-dark text-white p-5  m-auto">
       <div className="container">
         <div className="row">
-          <div className="col-md-4">
-            <h5>Contact Us</h5>
+          <div className="col-md-6 col-lg-3 col-sm-12">
+            <h5 className="fs-2">Contact Us</h5>
             <div className="contact-info">
-              <a href="mailto:info@yourcompany.com">
-                <FaEnvelope className="mr-2" /> info@yourcompany.com
+              <a className="footer-link">
+                <FaEnvelope className="me-2 footer-icon" />hmyahya001@gmail.com
               </a>
-              <a href="tel:+1234567890">
-                <FaPhone className="mr-2" /> +1 (234) 567-890
+              <br/>
+              <a className="footer-link" >
+                <FaPhone className="me-2 footer-icon" /> (+880) 1625290235
               </a>
-              <a href="https://maps.google.com">
-                <FaMapMarkerAlt className="mr-2" /> 123 Main St, Anytown USA
+              <br/>
+              <a className="footer-link">
+                <FaMapMarkerAlt className="me-2 footer-icon" /> Rong Mhahal Tower, Bondor Bazar, Sylhet, BD
               </a>
             </div>
           </div>
-          <div className="col-md-4">
-            <h5>Subscribe</h5>
+
+          <div className="col-md-6 col-lg-3 col-sm-12">
+            <h5 className="fs-2">Navigate</h5>
+            <div className="contact-info">
+              <Link className="footer-nav" to="/">Home</Link>
+              <br/>
+              <Link className="footer-nav" to="/all-jobs">All Jobs</Link>
+              <br/>
+              <Link className="footer-nav" to="/MyJobs">My Jobs</Link>
+              <br/>
+              <Link className="footer-nav" to="/login">Login</Link>
+              <br/>
+            </div>
+          </div>
+
+          <div className="col-md-6 col-lg-3 col-sm-12">
+            <h5 className="fs-2">Subscribe</h5>
             <p>Get the latest news and updates from us.</p>
             <form>
-              <div className="form-group">
+              <div className="form-group pb-3">
                 <input
                   type="email"
                   className="form-control"
                   placeholder="Enter your email"
                 />
               </div>
-              <button type="submit" className="btn btn-primary">
+              <button type="submit" className="btn footer-btn">
                 Subscribe
               </button>
             </form>
           </div>
-          <div className="col-md-4">
-            <h5>Follow Us</h5>
+          <div className="col-md-6 col-lg-3 col-sm-12">
+            <h5 className="fs-2">Follow Us</h5>
             <div className="social-links">
-              <a href="https://www.linkedin.com/">
-                <FaLinkedin className="mr-2" />
+              <a href="https://www.linkedin.com/in/hmyahya201/">
+                <FaLinkedin className="me-3 social-links" />
               </a>
-              <a href="https://twitter.com/">
-                <FaTwitterSquare className="mr-2" />
+              <a href="https://twitter.com/hmyahya201">
+                <FaTwitterSquare className="me-3 social-links" />
               </a>
-              <a href="https://www.instagram.com/">
-                <FaInstagramSquare className="mr-2" />
+              <a href="https://www.instagram.com/hmyahya201/?hl=en">
+                <FaInstagramSquare className="me-3 social-links" />
               </a>
             </div>
           </div>
         </div>
-        <div className="row mt-4">
+
+        <div className="row mt-4 col-sm-12">
           <div className="col-md-12 text-center">
-            <p>&copy; 2023 Your Company. All rights reserved.</p>
+            <p>&copy;2023 All rights reserved by hmyahya</p>
           </div>
         </div>
       </div>

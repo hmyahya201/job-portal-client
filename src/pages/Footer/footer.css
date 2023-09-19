@@ -1,0 +1,31 @@
+.footer-icon{
+   color: #EAB2FF;
+   font-size: 20px;
+}
+.footer-link{
+   color: white;
+   font-size: 20px;
+   padding: 8px 0;
+   cursor: pointer;
+}
+.footer-nav{
+   color: #EAB2FF;
+   font-size: 20px;
+   padding: 10px 0;
+   text-decoration: none;
+}
+.footer-btn{
+   background: #5f3ef5;
+   padding: 10px 20px;
+   font-size: 18px;
+   color: white;
+   transition: 0.3s;
+}
+.footer-btn:hover{
+   background: white;
+   color: black;
+}
+.social-links{
+   font-size: 50px;
+   border-radius: 100%;
+}

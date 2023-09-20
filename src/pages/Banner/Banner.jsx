@@ -44,7 +44,7 @@ useEffect(()=>{
             <div className="mt-5 text-center">
               <form className="form-design" onSubmit={handleSubmit(onSubmit)}>
                 <div className="input-field me-3">
-                <select className="select-field"  {...register("job-title")}>
+                <select className="select-field"  {...register("category")}>
                   {
                     jobName.map(option=><option
                     key={option.id}
@@ -58,7 +58,7 @@ useEffect(()=>{
                 </div>
 
                 <div className="input-field location-field">
-                <select className="select-field"  {...register("category")}>
+                <select className="select-field"  {...register("location")}>
                     {
                       locations.map(location=><option
                       key={location}
@@ -70,7 +70,6 @@ useEffect(()=>{
                 </div>
                
                 <button className="msubmit-btn" type="submit"> <FaSearch className="search-btn" fontSize="4em" /></button>
-                {/* <input type="submit" /> */}
               </form>
             </div>
 

@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import "./AddJob.css";
 import CreatableSelect from "react-select/creatable";
@@ -7,6 +7,14 @@ import { AuthContext } from "../../provider/AuthProvider";
 const AddJob = () => {
   const { user } = useContext(AuthContext);
   const [selectedOption, setSelectedOption] = useState(null);
+  const [locations, setLocation] = useState([])
+  const [categories, setCategories] = useState([])
+
+  useEffect(()=>{
+    fetch("jobCategory.json").then(res=>res.json()).then(data=>setCategories(data))},[])
+
+  useEffect(()=>{
+    fetch("countries.json").then(res=>res.json()).then(data=>setLocation(data))},[])
 
   const {
     register,
@@ -17,17 +25,7 @@ const AddJob = () => {
 
   const onSubmit = (data) => {
     data.skills = selectedOption;
-
-    fetch("http://localhost:5000/post-job", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
-    })
-      .then((res) => res.json())
-      .then((result) => {
-        console.log(result);
-      });
-    console.log(data);
+    console.log("from", data)
   };
   const options = [
     { value: "JavaScript", label: "JavaScript" },
@@ -39,7 +37,6 @@ const AddJob = () => {
     { value: "MongoDB", label: "MongoDB" },
     { value: "Redux", label: "Redux" },
   ];
-  //   console.log(user);
   return (
     <div className="add-job-container">
       <div className="add-job row">
@@ -50,7 +47,7 @@ const AddJob = () => {
             <h2 className="fs-2 fw-bolder p-4">Job Information</h2>
             <div className="job-post_form_card">
               <div>
-                <label htmlFor="title">
+                <label>
                   Job Title
                 </label>
                 <input
@@ -62,7 +59,7 @@ const AddJob = () => {
               </div>
 
               <div>
-                <label htmlFor="selery">Selery</label>
+                <label>Selery</label>
                 <input
                   className="text-input"
                   {...register("salary", { required: true })}
@@ -71,7 +68,7 @@ const AddJob = () => {
                 />
               </div>
               <div>
-                <label htmlFor="vacancy">Vacancy</label>
+                <label>Vacancy</label>
                 <input
                   className="text-input"
                   {...register("vacancy", { required: true })}
@@ -81,32 +78,32 @@ const AddJob = () => {
               </div>
 
               <div>
-                <label htmlFor="">Category</label>
+                <label>Category</label>
                 <select className="text-input" {...register("category")}>
-                  <option value="Engineering">engineering</option>
-                  <option value="Editor">Editor</option>
-                  <option value="writer">Writer</option>
-                  <option value="Developer">Developer</option>
+                 {
+                  categories.map((category, i)=><option key={i} value={category.name}>{category.name}</option>)
+                 }
                 </select>
               </div>
 
               <div>
-                <label htmlFor="">Job Type</label>
+                <label>Job Type</label>
                 <select className="text-input" {...register("status")}>
                   <option value="remote">Remote</option>
                   <option value="offline">Offline</option>
                 </select>
               </div>
               <div>
-                <label htmlFor="">Location</label>
-                <select className="text-input" {...register("status")}>
-                  <option value="remote">Remot</option>
-                  <option value="offline">Offline</option>
+                <label>Location</label>
+                <select className="text-input" {...register("location")}>
+                    {
+                      locations.map((location, i)=><option key={i} value={location}>{location}</option>)
+                    }
                 </select>
               </div>
 
              <div>
-              <label htmlFor="">Image Url</label>
+              <label>Image Url</label>
               <input
                 className="text-input"
                 {...register("image")}
@@ -117,7 +114,7 @@ const AddJob = () => {
              </div>
 
               <div>
-                <label htmlFor="">Deadline</label>
+                <label>Deadline</label>
                 <input
                   className="text-input"
                   {...register("deadline")}
@@ -127,7 +124,7 @@ const AddJob = () => {
               </div>
 
               <div>
-                <label htmlFor="">Email</label>
+                <label>Email</label>
                 <input
                   className="text-input"
                   value={user?.email}
@@ -138,7 +135,7 @@ const AddJob = () => {
               </div>
 
               <div>
-                <label htmlFor="">Skills</label>
+                <label>Skills</label>
                 <CreatableSelect
                   className="skills-input"
                   defaultValue={selectedOption}
@@ -149,7 +146,7 @@ const AddJob = () => {
               </div>
 
               <div>
-                <label htmlFor="">Description</label>
+                <label>Description</label>
                 <input
                   className="text-input"
                   {...register("description")}

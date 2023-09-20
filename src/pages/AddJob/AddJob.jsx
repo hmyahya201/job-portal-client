@@ -90,7 +90,7 @@ const AddJob = () => {
                 <label>Job Type</label>
                 <select className="text-input" {...register("status")}>
                   <option value="remote">Remote</option>
-                  <option value="offline">Offline</option>
+                  <option value="offline">On Site</option>
                 </select>
               </div>
               <div>
@@ -106,7 +106,7 @@ const AddJob = () => {
               <label>Image Url</label>
               <input
                 className="text-input"
-                {...register("image")}
+                {...register("img")}
                 placeholder="image link"
                 type="url"
                 defaultValue="https://images.pexels.com/photos/2528118/pexels-photo-2528118.jpeg?auto=compress&cs=tinysrgb&w=600"

@@ -5,31 +5,31 @@ import "./Banner.css";
 import { useEffect, useState} from "react";
 
 function Banner() {
-  const [jobName, setJobName] = useState([])
+  const [categories, setCategories] = useState([])
   const [locations, setLocations] = useState([])
 
  //for job location
 useEffect(()=>{
-  fetch("countries.json")
+  fetch("http://localhost:5000/location")
   .then(res=>res.json())
   .then(data=>{
     setLocations(data)
   })
-},[])
+},[locations])
 
 //for job title
 useEffect(()=>{
-  fetch("jobCategory.json")
+  fetch("http://localhost:5000/category")
   .then(res=>res.json())
   .then(data=>{
-    setJobName(data)
+    setCategories(data)
   })
-},[])
+},[categories])
   const {
     register,
     handleSubmit,
   } = useForm()
-  const onSubmit = (data) => console.log("submit data", data)
+  const onSubmit = (data) => console.log(data)
 
   return (
 
@@ -46,8 +46,8 @@ useEffect(()=>{
                 <div className="input-field me-3">
                 <select className="select-field"  {...register("category")}>
                   {
-                    jobName.map(option=><option
-                    key={option.id}
+                    categories.map(option=><option
+                    key={option._id}
                     value={option.name}
                     >
                       {option.name}
@@ -61,9 +61,9 @@ useEffect(()=>{
                 <select className="select-field"  {...register("location")}>
                     {
                       locations.map(location=><option
-                      key={location}
-                      value={location}
-                      >{location}</option>)
+                      key={location._id}
+                      value={location.name}
+                      >{location.name}</option>)
                     }
                 </select>
                 <p className="mt-2"><FaMapMarkerAlt color="gray" fontSize="1.5em" /></p>

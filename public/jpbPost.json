@@ -1,0 +1,143 @@
+
+   [
+      {
+         "title": "Data Analyst",
+         "salary": "$60,000 - $75,000 per year",
+         "vacancy": 2,
+         "category": "Software Developer",
+         "status": "Remote",
+         "location": "New York, NY",
+         "img": "https://example.com/job1_image.jpg",
+         "deadline": "2023-10-20",
+         "postedby": "DataCo Analytics",
+         "skills": ["SQL", "Data Visualization", "Statistical Analysis"],
+         "description": "Join our data analytics team and play a key role in transforming data into actionable insights. We are looking for a Data Analyst who is passionate about data and has a strong analytical mindset."
+       },
+
+       {
+         "title": "Graphic Designer",
+         "salary": "$50,000 - $65,000 per year",
+         "vacancy": 1,
+         "category": "Data Analyst",
+         "status": "On Site",
+         "location": "Los Angeles, CA",
+         "img": "https://example.com/job2_image.jpg",
+         "deadline": "2023-10-25",
+         "postedby": "Creative Designs Inc.",
+         "skills": ["Adobe Creative Suite", "UI/UX Design", "Illustration"],
+         "description": "Are you a creative and talented Graphic Designer? Join our design team and work on exciting projects that will showcase your design skills and creativity."
+       },
+
+       {
+         "title": "Marketing Manager",
+         "salary": "$70,000 - $90,000 per year",
+         "vacancy": 1,
+         "category": "Registered Nurse",
+         "status": "Remote",
+         "location": "Chicago, IL",
+         "img": "https://example.com/job3_image.jpg",
+         "deadline": "2023-10-18",
+         "postedby": "MarketPro Solutions",
+         "skills": ["Digital Marketing", "Marketing Strategy", "Social Media Management"],
+         "description": "Join our marketing team and lead strategic marketing initiatives. We are seeking an experienced Marketing Manager to drive our brand's success."
+       },
+
+       {
+         "title": "Front-end Developer",
+         "salary": "$75,000 - $90,000 per year",
+         "vacancy": 2,
+         "category": "Civil Engineer",
+         "status": "On Site",
+         "location": "Seattle, WA",
+         "img": "https://example.com/job4_image.jpg",
+         "deadline": "2023-10-22",
+         "postedby": "TechSolutions Inc.",
+         "skills": ["HTML", "CSS", "JavaScript", "React"],
+         "description": "Join our development team and build user-friendly web interfaces. We are looking for skilled Front-end Developers to create responsive and interactive websites."
+       },
+
+       {
+         "title": "Nurse Practitioner",
+         "salary": "$80,000 - $100,000 per year",
+         "vacancy": 3,
+         "category": "Teacher",
+         "status": "On Site",
+         "location": "Houston, TX",
+         "img": "https://example.com/job5_image.jpg",
+         "deadline": "2023-10-28",
+         "postedby": "HealthCare Plus",
+         "skills": ["Nursing", "Patient Care", "Medical Diagnosis"],
+         "description": "Are you a compassionate Nurse Practitioner? Join our healthcare team and provide high-quality care to our patients."
+       },
+
+       {
+         "title": "Financial Analyst",
+         "salary": "$65,000 - $80,000 per year",
+         "vacancy": 2,
+         "category": "Marketing Manager",
+         "status": "Remote",
+         "location": "San Diego, CA",
+         "img": "https://example.com/job6_image.jpg",
+         "deadline": "2023-10-24",
+         "postedby": "FinanceHub LLC",
+         "skills": ["Financial Analysis", "Excel", "Budgeting"],
+         "description": "Join our finance team and analyze financial data to support informed decision-making. We are looking for detail-oriented Financial Analysts."
+       },
+
+       {
+         "title": "Customer Service Representative",
+         "salary": "$40,000 - $50,000 per year",
+         "vacancy": 4,
+         "category": "Sales Representative",
+         "status": "Remote",
+         "location": "Miami, FL",
+         "img": "https://example.com/job7_image.jpg",
+         "deadline": "2023-10-19",
+         "postedby": "ServiceFirst Solutions",
+         "skills": ["Communication", "Problem Solving", "Customer Support"],
+         "description": "Join our customer service team and provide exceptional support to our valued customers."
+       },
+
+       {
+         "title": "Project Manager",
+         "salary": "$85,000 - $110,000 per year",
+         "vacancy": 1,
+         "category": "Human Resources Specialist",
+         "status": "On Site",
+         "location": "Boston, MA",
+         "img": "https://example.com/job8_image.jpg",
+         "deadline": "2023-10-23",
+         "postedby": "ProjectWorks Inc.",
+         "skills": ["Project Planning", "Team Leadership", "Risk Management"],
+         "description": "Lead and manage key projects within our organization. We are seeking an experienced Project Manager to drive project success."
+       },
+
+       {
+         "title": "Sales Representative",
+         "salary": "$50,000 - $70,000 per year",
+         "vacancy": 3,
+         "category": "Construction Worker",
+         "status": "On Site",
+         "location": "Dallas, TX",
+         "img": "https://example.com/job9_image.jpg",
+         "deadline": "2023-10-21",
+         "postedby": "SalesPros Inc.",
+         "skills": ["Salesmanship", "Negotiation", "Client Relationship"],
+         "description": "Join our sales team and help drive revenue growth by acquiring and retaining clients."
+       },
+
+       {
+         "title": "HR Specialist",
+         "salary": "$55,000 - $70,000 per year",
+         "vacancy": 2,
+         "category": "Electrician",
+         "status": "Remote",
+         "location": "Atlanta, GA",
+         "img": "https://example.com/job10_image.jpg",
+         "deadline": "2023-10-26",
+         "postedby": "HRConnect Solutions",
+         "skills": ["Recruitment", "Employee Relations", "HR Policies"],
+         "description": "Join our HR team and play a crucial role in talent acquisition, employee engagement, and HR operations."
+       }
+
+   ]

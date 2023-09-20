@@ -17,7 +17,6 @@ const Job = ({ job }) => {
     vacancy,
   } = job || {};
   return (
-    <div className="job col-md-12 col-sm-12 col-lg-6 ">
       <div className="row d-flex justify-content-center align-items-center single-card">
         <div className="col-md-4">
           <img
@@ -29,9 +28,10 @@ const Job = ({ job }) => {
         <div className="col-md-8 card-right">
           <h2>{title}</h2>
           <p>{description}</p>
+          <p className="bg-primary">{status}</p>
           <div className="all-skils d-flex  flex-wrap justify-content-around align-items-center">
-            {skills?.map((skill) => (
-              <button className="bg-dark text-white p-1">{skill?.value}</button>
+            {skills?.map((skill, i) => (
+              <button key={i} className="bg-dark text-white p-1">{skill?.value}</button>
             ))}
           </div>
           <div className="card-footer text-start p-4 mt-3 d-flex justify-content-between ">
@@ -49,7 +49,6 @@ const Job = ({ job }) => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

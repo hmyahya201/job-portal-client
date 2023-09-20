@@ -1,5 +1,5 @@
   [
-   { "id": 0, "name": "Your Job Type" },
+   { "id": 0, "name": "Your Job Category" },
    { "id": 1, "name": "Software Developer" },
    { "id": 2, "name": "Data Analyst" },
    { "id": 3, "name": "Registered Nurse" },

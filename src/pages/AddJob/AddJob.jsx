@@ -39,83 +39,129 @@ const AddJob = () => {
     { value: "MongoDB", label: "MongoDB" },
     { value: "Redux", label: "Redux" },
   ];
-//   console.log(user);
+  //   console.log(user);
   return (
     <div className="add-job-container">
       <div className="add-job row">
-        <div className="col-md-8">
 
-          
-          <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="col-lg-8 col-sm-12">
+          <form onSubmit={handleSubmit(onSubmit)} className="job-post_form">
             {errors.exampleRequired && <span>This field is required</span>}
-            <input
-              className="text-input"
-              {...register("title")}
-              placeholder="title"
-              defaultValue="Web developer"
-            />
+            <h2 className="fs-2 fw-bolder p-4">Job Information</h2>
+            <div className="job-post_form_card">
+              <div>
+                <label htmlFor="title">
+                  Job Title
+                </label>
+                <input
+                  className="text-input"
+                  {...register("title")}
+                  placeholder="title"
+                  defaultValue="Web developer"
+                />
+              </div>
 
-            <input
-              className="text-input"
-              {...register("salary", { required: true })}
-              placeholder="salary"
-              defaultValue="30k"
-            />
-            <input
-              className="text-input"
-              {...register("vacancy", { required: true })}
-              placeholder="vacancy"
-              type="number"
-            />
-            <select className="text-input" {...register("category")}>
-              <option value="Engineering">engineering</option>
-              <option value="Editor">Editor</option>
-              <option value="writer">Writer</option>
-              <option value="Developer">Developer</option>
-            </select>
-            <select className="text-input" {...register("status")}>
-              <option value="remote">Remote</option>
-              <option value="offline">Offline</option>
-            </select>
-            <input
-              className="text-input"
-              {...register("image")}
-              placeholder="image link"
-              type="url"
-              defaultValue="https://images.pexels.com/photos/2528118/pexels-photo-2528118.jpeg?auto=compress&cs=tinysrgb&w=600"
-            />
-            <input
-              className="text-input"
-              {...register("deadline")}
-              placeholder="deadline"
-              type="date"
-            />
-            <input
-              className="text-input"
-              value={user?.email}
-              {...register("postedBy")}
-              placeholder="your email"
-              type="email"
-            />
-            <CreatableSelect
-              className="w-75"
-              defaultValue={selectedOption}
-              onChange={setSelectedOption}
-              options={options}
-              isMulti
-            />
-            <input
-              className="text-input"
-              {...register("description")}
-              placeholder="description"
-            />
-            <input className="submit-btn" value="Post Job" type="submit" />
+              <div>
+                <label htmlFor="selery">Selery</label>
+                <input
+                  className="text-input"
+                  {...register("salary", { required: true })}
+                  placeholder="salary"
+                  defaultValue="30k"
+                />
+              </div>
+              <div>
+                <label htmlFor="vacancy">Vacancy</label>
+                <input
+                  className="text-input"
+                  {...register("vacancy", { required: true })}
+                  placeholder="vacancy"
+                  type="number"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="">Category</label>
+                <select className="text-input" {...register("category")}>
+                  <option value="Engineering">engineering</option>
+                  <option value="Editor">Editor</option>
+                  <option value="writer">Writer</option>
+                  <option value="Developer">Developer</option>
+                </select>
+              </div>
+
+              <div>
+                <label htmlFor="">Job Type</label>
+                <select className="text-input" {...register("status")}>
+                  <option value="remote">Remote</option>
+                  <option value="offline">Offline</option>
+                </select>
+              </div>
+              <div>
+                <label htmlFor="">Location</label>
+                <select className="text-input" {...register("status")}>
+                  <option value="remote">Remot</option>
+                  <option value="offline">Offline</option>
+                </select>
+              </div>
+
+             <div>
+              <label htmlFor="">Image Url</label>
+              <input
+                className="text-input"
+                {...register("image")}
+                placeholder="image link"
+                type="url"
+                defaultValue="https://images.pexels.com/photos/2528118/pexels-photo-2528118.jpeg?auto=compress&cs=tinysrgb&w=600"
+              />
+             </div>
+
+              <div>
+                <label htmlFor="">Deadline</label>
+                <input
+                  className="text-input"
+                  {...register("deadline")}
+                  placeholder="deadline"
+                  type="date"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="">Email</label>
+                <input
+                  className="text-input"
+                  value={user?.email}
+                  {...register("postedBy")}
+                  placeholder="your email"
+                  type="email"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="">Skills</label>
+                <CreatableSelect
+                  className="skills-input"
+                  defaultValue={selectedOption}
+                  onChange={setSelectedOption}
+                  options={options}
+                  isMulti
+                />
+              </div>
+
+              <div>
+                <label htmlFor="">Description</label>
+                <input
+                  className="text-input"
+                  {...register("description")}
+                  placeholder="description"
+                />
+              </div>
+            </div>
+            <input className="submit-btn p-3 mt-3 rounded" value="Post Job" type="submit" />
           </form>
-
-
-
         </div>
-        <div className="col-md-4">
+
+        <div className="col-lg-4 col-sm-12">
           <img
             className="w-100"
             src="https://i.ibb.co/rthZ75K/pngtree-job-vacancy-with-join-our-team-recruitment-vector-design-png-image-6419066-removebg-preview.png"

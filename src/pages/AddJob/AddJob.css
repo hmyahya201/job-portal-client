@@ -1,14 +1,38 @@
 .add-job-container{
-    padding: 20px;
-    height: 100vh;
+    width: 90%;
+    margin: auto;
+   padding: 100px 0;
     display: flex;
     justify-content: center;
     align-items:center;
 }
+.job-post_form{
+    background: white;
+    padding: 40px 30px;
+   display: grid;
+   place-items: center;
+   border-radius: 20px;
+   box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+}
+.job-post_form_card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+
 .text-input{
     border: none;
     padding: 15px;
-    margin: 5px;
+    margin: 5px 0;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 20px;
+    background: #EAB2FF;
+}
+.skills-input{
+    width: 100%;
+    background: #EAB2FF;
 }
 .submit-btn{
     width: 60%;
@@ -24,4 +48,16 @@
 }
 .submit-btn:hover{
     background-color: rgb(25, 25, 193);
+}
+
+/* //responsive */
+@media (max-width: 800px) {
+    .job-post_form_card{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .job-post_form_card{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

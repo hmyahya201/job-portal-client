@@ -36,7 +36,7 @@ useEffect(()=>{
     <section className="banner-container">
         <div className="text-center">
           <div className="col-sm-12 ">
-            <h4 className="sub-title p-5">Helping you to find any type of job</h4>
+            <h4 className="sub-title">Helping you to find any type of job</h4>
             <h1 className="title fw-bolder mt-4">
               Find Your Dream <br /> Job Today
             </h1>
